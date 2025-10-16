@@ -1,0 +1,39 @@
+# Compiled object files and binaries
+*.o
+*.obj
+*.exe
+*.out
+*.bin
+*.dll
+*.so
+*.dylib
+
+# Build directories
+build/
+bin/
+obj/
+
+# Temporary files
+*~
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Editor/IDE specific files (examples)
+.vscode/
+.idea/
+*.user
+*.suo
+*.ncb
+*.aps
+*.ilk
+*.pdb
+*.ipch
+
+# Log files
+*.log
+
+# Other
+.DS_Store # macOS specific
+Thumbs.db # Windows specific
