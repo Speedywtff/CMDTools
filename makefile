@@ -1,14 +1,14 @@
 CC = gcc
 FL = -Wall -Wextra
 
-all: initial
+all: grep
 
-initial: initial.o
-	@$(CC) $(FL) initial.o -o test
-	@echo "initial made"
+grep: grep.o
+	@$(CC) $(FL) grep.o -o test
+	@echo "grep made"
 
-initial.o: initial.c
-	@$(CC) $(FL) -c initial.c -o initial.o
+grep.o: grep.c
+	@$(CC) $(FL) -c grep.c -o grep.o
 	
 map: hashmap.o
 	@$(CC) $(FL) hashmap.o -o map
@@ -17,4 +17,4 @@ map.o: hashmap.c hashmap.h
 	@$(CC) $(FL) -c hashmap.c -o hashmap.o
 
 clean: 
-	@rm -f *.o test
+	@rm -f *.o test map
