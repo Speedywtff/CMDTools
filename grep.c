@@ -8,7 +8,7 @@ void readFile(char* searchable, FILE *f){
     char line[256];
     int i = 1;
     line[strcspn(line, "\n")] = '\0';
-    while(fgets(line, sizeof(line), f) != NULL){
+    while(fgets(line, sizeof(line), f) != NULL){  //DOES NOT WORK FOR SUBSTRINGS. 
         if(strcmp(line, searchable) == 0){
             printf("Found %s in line: %d\n", searchable, i);
         }
