@@ -1,28 +1,28 @@
 #ifndef HASHMAP_H
 #define HASHMAP_H
 
-typedef struct node* nodeptr;
+typedef struct node node; 
 
-typedef struct{
+struct node{
     char* key;
     char* value;
-    nodeptr next; //Next hashbucket
-} node;
+    node* next; //Next hashbucket
+};
 
 typedef struct {
     int numOfElements;
     int capacity;
-    nodeptr* arr;
+    node** arr;
 } hashmap;
 
 
 hashmap* makeMap();
 
-node* setNode(char* key, char* value);
+node*  setNode(char* key, char* value);
 
 int hash(hashmap* map, char* key);
 
-void insertNode(hashmap* map, node n);
+void insertNode(hashmap* map, node* n);
 
 void deleteNode(hashmap* map, node n);
 
